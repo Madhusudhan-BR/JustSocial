@@ -10,12 +10,27 @@ import UIKit
 
 class CustomLabel: UILabel {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    override func awakeFromNib() {
+        
+        super.awakeFromNib()
+        layer.shadowColor  = UIColor(red: SHADOW_GREY, green: SHADOW_GREY, blue: SHADOW_GREY, alpha: 0.7).cgColor
+        layer.shadowOpacity = 0.8
+        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 1, height: 1)
+        
+       
     }
-    */
-
+    
+    override func layoutSubviews() {
+         super.layoutSubviews()
+        
+        // Rounded Corners
+        layer.masksToBounds = true
+        layer.cornerRadius = 10
+        
+        
+    }
+    
+    
 }

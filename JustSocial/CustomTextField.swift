@@ -10,12 +10,20 @@ import UIKit
 
 class CustomTextField: UITextField {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layer.borderColor = UIColor(red: SHADOW_GREY, green: SHADOW_GREY, blue: SHADOW_GREY, alpha: 1).cgColor
+        layer.borderWidth = 1.0
     }
-    */
-
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // Rounded Corners
+        layer.masksToBounds = true
+        layer.cornerRadius = 5
+        
+        
+    }
 }

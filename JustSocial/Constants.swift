@@ -6,4 +6,7 @@
 //  Copyright © 2017 Madhusudhan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+let SHADOW_GREY : CGFloat = 128/255
+
